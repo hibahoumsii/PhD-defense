@@ -44,3 +44,6 @@ Desktop.ini
 # Temporary files
 *.tmp
 *.temp
+
+# Image conversions
+*.png
