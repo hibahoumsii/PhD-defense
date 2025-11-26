@@ -18,12 +18,28 @@ Ampère Laboratory, INSA Lyon, France
 
 This PhD defense presents advanced control strategies for Permanent Magnet Synchronous Machines (PMSM) with a focus on embedded implementation on low-cost microcontrollers. The work addresses three main research areas:
 
+## Problem Statement
+
+Traditional control approaches rely on offline computation on powerful computers. This work proposes a novel **hybrid online-offline approach** where optimization solvers run directly on the embedded microcontroller.
+
+![Embedded Approach](pictures/online_offline2.eps)
+*Proposed embedded approach: optimization directly on microcontroller*
+
+## Research Contributions
+
 ### Part 1: Optimal Torque Control
 - Novel convex formulation of the optimal torque control (OTC) problem
 - Change of variable approach to eliminate bilinear constraints
 - Convexity proof via Sum-of-Squares (SoS) programming
 - Real-time interior-point solver for embedded implementation
 - Experimental validation on IPMSM test bench
+
+**Visual illustration:** The presentation includes an animated sequence showing how the optimal current trajectory evolves across different torque and speed operating points.
+- Animation frames: `eps_frames_torque_cost_speed_optimal/frame_000` to `frame_014`
+- Illustrates voltage ellipse, current circle, and torque hyperbola constraints
+
+![Solver Performance](pictures/expe_idq_solver.eps)
+*Real-time solver performance: optimal current references tracking*
 
 ### Part 2: Embedded Control Synthesis
 - Pole-constrained H₂ controller synthesis for current regulation
@@ -32,12 +48,25 @@ This PhD defense presents advanced control strategies for Permanent Magnet Synch
 - Guaranteed transient specifications (decay rate, damping)
 - Experimental validation on dsPIC33AK512MC510
 
+**Visual illustration:** The control architecture shows the complete embedded system with high-priority control loops and idle-task LMI solver.
+
+![Embedded Control Architecture](pictures/combined.eps)
+*Complete embedded control system showing: control loops, trajectory generation, and embedded synthesis*
+
+![Test Bench](pictures/PMSM_test_bench.eps)
+*CTRL-ELEC experimental platform: IPMSM motor, inverter, and dsPIC33AK512 microcontroller*
+
 ### Part 3: Linear Parameter-Varying (LPV) Control
 - Linearization-free control approach
 - Speed-dependent gain scheduling with Lyapunov stability certificates
 - Improved noise rejection compared to PI control
 - LMI-based synthesis for robust performance
 - Experimental validation showing superior tracking and disturbance rejection
+
+**Visual illustration:** Speed-dependent gain scheduling with superior noise rejection compared to PI control.
+
+![LPV Control Architecture](pictures/ControlFOCLPV.eps)
+*LPV control structure with speed-dependent gain scheduling K(ω)*
 
 ## Key Contributions
 
@@ -46,10 +75,22 @@ This PhD defense presents advanced control strategies for Permanent Magnet Synch
 3. **Online control synthesis** enabling adaptive performance tuning
 4. **Experimental validation** on industrial motor drive platforms
 
+## Overall System Architecture
+
+The complete embedded control system integrates all three contributions:
+
+![Complete System Diagram](pictures/AdvancedControl.eps)
+*Overall control architecture showing the interaction between trajectory generation (Part 1), feedback control (Part 2), and embedded synthesis (Part 2)*
+
+The system operates at multiple priority levels:
+- **High priority (~20 kHz):** Current control loop with optimized gains
+- **Lower priority (~1 kHz):** Optimal trajectory generation solving OTC problem
+- **Idle task:** Embedded LMI solver for online controller adaptation
+
 ## Applications
 
 The proposed methods are applicable to:
-- Automotive propulsion systems
+- Automotive propulsion systems (electric vehicles)
 - Robotic actuators
 - Wind turbines and power generation
 - Industrial motor drives requiring high performance and low cost
