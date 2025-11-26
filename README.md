@@ -64,10 +64,12 @@ Traditional control approaches rely on offline computation on powerful computers
 
 ## Overall System Architecture
 
-The complete embedded control system integrates all three contributions and operates at multiple priority levels:
+The complete embedded control system integrates all three contributions and operates at multiple priority levels using a **Rate Monotonic Scheduler**:
 - **High priority (~20 kHz):** Current control loop with optimized gains
 - **Lower priority (~1 kHz):** Optimal trajectory generation solving OTC problem
 - **Idle task:** Embedded LMI solver for online controller adaptation
+
+The rate monotonic scheduling ensures that high-frequency control tasks (current regulation) execute with guaranteed real-time performance, while lower-priority optimization tasks (trajectory generation and controller synthesis) run during available computational resources without disrupting the critical control loops.
 
 ## Applications
 
