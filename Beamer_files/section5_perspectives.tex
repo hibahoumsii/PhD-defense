@@ -1,0 +1,154 @@
+\section{Perspectives}
+\begin{frame}{Long-term perspectives}
+     \begin{figure}
+            \begin{center}
+                \def\textsize{.8}
+                \psfrag{Algo}[c][c][1]{\color{Blue4}Control}
+                \psfrag{Control}[c][c][1]{\color{Blue4}Control}
+                \psfrag{iabc}[c][c][\textsize]{\color{Blue4}$i_{abc}$}
+                \psfrag{idq}[c][c][\textsize]{\color{Blue4}$i_{dq}$}
+                
+                \psfrag{Sys}[c][c][\textsize]{\color{Magenta4}System}
+                \psfrag{identif}[c][c][\textsize]{\color{Magenta4} identification}
+                \psfrag{vabcr}[c][c][\textsize]{\color{Blue4}$v_{abc}^\#$}
+                \psfrag{vdqr}[c][c][\textsize]{\color{Blue4}$v_{dq}^\#$}
+                \psfrag{dq}[c][c][.5]{\color{Blue4}${dq}$}
+                \psfrag{abc}[c][c][.5]{\color{Blue4}${abc}\quad$}
+                \psfrag{S}[c][c][\textsize]{\color{Blue4}$S_{abc}$}
+                \psfrag{MLI}[c][c][\textsize]{\color{Blue4}Mod}
+                \psfrag{ParkInv}[c][c][.5]{}
+                \psfrag{Park}[c][c][.5]{}
+                \psfrag{TS1}[l][c][.6]{\color{Blue4}Higher priority $\approx20$kHz}
+                % Reference generation (cyan) - lower priority optimization
+                \psfrag{Vr}[c][c][\textsize]{\color{Cyan4}$\rho^\#$}
+                \psfrag{ref}[c][c][\textsize]{\color{Cyan4}$\omega^\#$}
+                \psfrag{ref2}[c][c][\textsize]{\color{Cyan4}$i_d^\#$}
+                \psfrag{ref3}[c][c][\textsize]{\color{Cyan4}$\omega^\#$}
+                \psfrag{ref4}[c][c][\textsize]{\color{Cyan4}$i_q$}
+                \psfrag{ref5}[c][c][\textsize]{\color{Magenta4} Specification}
+                \psfrag{ref6}[c][c][\textsize]{\color{Magenta4} Model}
+                \psfrag{Reference}[c][c][\textsize]{\color{Cyan4}Trajectory}
+                \psfrag{calculation}[c][c][\textsize]{\color{Cyan4}generation}
+                \psfrag{TS2}[l][c][.6]{\color{Cyan4}Lower priority $\approx1$kHz}
+                % Embedded synthesis (magenta) - idle task
+                \psfrag{Emb}[c][c][\textsize]{\color{Magenta4}Embedded}
+                \psfrag{Synt}[c][c][\textsize]{\color{Magenta4}synthesis}
+                \psfrag{K}[c][c][\textsize]{\color{Magenta4}K}
+                \psfrag{TS3}[l][c][.6]{\color{Magenta4}Idle task}
+                \psfrag{ref7}[l][c][.6]{\color{Magenta4}Data}
+                % Physical system (red) - PMSM and measurements
+                \psfrag{Onduleur}[c][c][\textsize]{\color{Red4}Invert}
+                \psfrag{PMSM}[c][c][\textsize]{\color{Red4}PMSM}
+                \psfrag{V}[c][c][\textsize]{\color{Red4}$v_{abc}$}
+                \psfrag{th}[c][c][\textsize]{\color{Red4}$\theta$}
+                \psfrag{w}[c][c][\textsize]{\color{Red4}$\omega$}
+                \psfrag{thm}[c][c][\textsize]{\color{Red4}$\theta$}
+                \psfrag{wm}[c][c][\textsize]{\color{Red4}$\omega$}
+                \psfrag{Embedded}[l][c][.7]{\color{red}Embedded code}
+                \includegraphics[width = .9\textwidth]{pictures/AdvancedControl_ident.eps}
+            \end{center}
+       % \label{fig:AdvencedControlForElectricalMotor}
+        \end{figure}
+        \vspace{+0.3cm}
+        \centering
+        \textbf{Vision:} Fully embedded, \textcolor{blue}{plug-and-play} control system integrating parameter estimation, control synthesis, and real-time optimization
+
+\end{frame}
+%\end{frame}
+
+% \begin{frame}{Long-term Vision and Future Directions}
+
+%     \vspace{0.3cm}
+
+%             \centering
+%             \textbf{\textcolor{blue}{Generalization}}
+
+%             \vspace{0.2cm}
+%             \small
+%             \begin{itemize}
+%                 \item Power electronic converters
+%                 \item Energy generators (wind farms)
+%                 \item Robotic actuators
+%                 \item Autonomous systems requiring online adaptation
+%                 \item Other types of machines (Poly-phase machines, Synchronous reluctance, induction...)
+%             \end{itemize}
+
+% \end{frame}
+
+\section{Publications}
+\begin{frame}{Publications}
+    \footnotesize
+    \vspace{-0.2cm}
+    \begin{samepage}
+            \begin{enumerate}[leftmargin=*, labelsep=0.3em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}, itemsep=0.3em]
+            \item[\textbf{[C.1]}]  \textbf{A Karush-Kuhn-Tucker approach to field-weakening for Surface-Mounted Permanent Magnets Synchronous Motors}\\
+            \mbox{\textbf{\textit{Hiba Houmsi}}}, \mbox{Federico Bribiesca-Argomedo}, \mbox{Paolo Massioni}, \mbox{Romain Delpoux}.\\
+            \textit{IEEE International Conference on Control, Automation and Diagnosis (ICCAD), Rome, Italy, 2023}
+
+            \item[\textbf{[C.2]}] \textbf{Embedded Controller Optimization for Efficient Electric Motor Drive} \\
+            \mbox{\textbf{\textit{Hiba Houmsi}}}, \mbox{Paolo Massioni}, \mbox{Federico Bribiesca-Argomedo}, \mbox{Romain Delpoux}.\\
+            \textit{IEEE Vehicle Power and Propulsion Conference (VPPC), Milan, Italy, 2023}
+
+            \item[\textbf{[C.3]}] \textbf{Robust Pole-constrained $\mathcal{H}_2$ Controller for Permanent Magnet Synchronous Motors} \\
+            \mbox{\textbf{\textit{Hiba Houmsi}}}, \mbox{Paolo Massioni}, \mbox{Federico Bribiesca-Argomedo}, \mbox{Romain Delpoux}.\\
+            \textit{IEEE 23rd European control conference, Thessaloniki, Greece, 2025}
+
+            \item[\textbf{[C.4]}] \textbf{Real-Time Interior-Point Solver for Optimal Torque Control of Interior-permanent Magnet Synchronous machines} \\
+            \mbox{\textbf{\textit{Hiba Houmsi}}}, \mbox{Federico Bribiesca-Argomedo}, \mbox{Paolo Massioni}, \mbox{Romain Delpoux}.\\
+            \textit{IEEE 60th Industrial Application Sociaty Annual Meeting, New Taipei City, Taiwan,2025 }
+            \vspace{0.1cm}
+
+            \textbf{\underline{Submitted articles}}
+            \vspace{0.1cm}
+
+            \item[\textbf{[J.1]}] \textbf{On-chip Embedded Convex Optimization LMI Solver for Rapid Control Tuning on Industrial Targets} \\
+            \mbox{\textbf{\textit{Hiba Houmsi}}}, \mbox{Paolo Massioni}, \mbox{Federico Bribiesca-Argomedo}, \mbox{Romain Delpoux}.\\
+            \textit{Ongoing work}
+
+            \item[\textbf{[J.2]}] \textbf{Linear parameter-varying (LPV) control of synchronous machines: an energy-efficient intuitive gain tuning approach} \\
+            \mbox{\textbf{\textit{Hiba Houmsi}}}, \mbox{Paolo Massioni}, \mbox{Federico Bribiesca-Argomedo}, \mbox{Romain Delpoux}.\\
+            \textit{Ongoing work}
+            \vspace{0.1cm}
+
+            % \textbf{\underline{Tutorials:}}
+            % \vspace{-0.1cm}
+
+            % \item[\textbf{[T.1]}] \textbf{Embedded Rapid Control Prototyping (RCP) for electric motors: Open Source experimental approach for the user. \href{https://old.symposium.it/en/events/2024/26th-international-conference-on-electrical-machines-icem-2024/tutorials}{}}\\
+            % \mbox{\textit{Romain Delpoux}}, \mbox{Lubin Kerhuel}, \textbf{\mbox{Hiba Houmsi}}.\\
+            % \textit{IEEE 2024 International Conference on Electrical Machines (ICEM)}
+
+
+
+            \end{enumerate}
+    \end{samepage}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \Huge \textbf{Thank You}\\
+        \vspace{1cm}
+        \Large Questions?\\
+        \vspace{1cm}
+        \normalsize
+        \textbf{Hiba HOUMSI}\\
+        \textit{hiba.houmsi@insa-lyon.fr}\\
+        \vspace{0.5cm}
+        \textbf{CTRL-ELEC Platform:}\\
+        \url{https://www.ctrl-elec.fr}
+
+        \vspace{0.5cm}
+        \begin{figure}[htbp]
+        \begin{center}
+        \href{http://www.ampere-lab.fr/}{\includegraphics[height = 1cm]{pictures/logo/logoAMPERE}}
+        \href{https://www.insa-lyon.fr/}{\includegraphics[height = 1cm]{pictures/logo/INSA}}
+        \includegraphics[height=1cm]{pictures/logo/CNRS}
+        \includegraphics[height=1cm]{pictures/logo/UDL}
+        \includegraphics[height=1cm]{pictures/logo/Centrale}
+        \includegraphics[height=1cm]{pictures/logo/Lyon1}
+        \end{center}
+        \end{figure}
+    \end{center}
+\end{frame}
+
+
+\appendix

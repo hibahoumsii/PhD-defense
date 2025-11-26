@@ -1,0 +1,151 @@
+\documentclass[10pt,aspectratio=169]{beamer}
+\usepackage{appendixnumberbeamer}
+\usetheme{default}
+\usecolortheme{default}
+\definecolor{ceruleanblue}{rgb}{0.2,0.2,0.7}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{
+  \hfill%
+  \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{page number in head/foot}%
+  \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+}
+\setbeamertemplate{footnote}{%
+  \parindent 0em\noindent%
+  \raggedright
+  \insertfootnotemark\insertfootnotetext
+}
+\setbeamertemplate{headline}{}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{frametitle}{fg=brown!130, bg=white} %titre de chaque frame
+\setbeamercolor{enumerate item}{fg=red}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{patterns,calc}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage[svgnames]{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{eurosym}
+\usepackage{animate}
+\usepackage{media9}
+\usepackage{hyperref}
+\usepackage{pstool}
+  \usepackage{cancel}
+\definecolor{darkgray}{RGB}{64,64,64}% Custom colors - minimalist grayscale palette
+\definecolor{lightgray}{RGB}{128,128,128}
+\definecolor{mediumgray}{RGB}{96,96,96}
+\definecolor{lightblue}{RGB}{173,216,230}
+\definecolor{Magenta4}{HTML}{8f008f}
+\definecolor{Red4}{HTML}{8f0000}
+\definecolor{Cyan4}{HTML}{008f8f}
+\definecolor{Blue4}{HTML}{00008f}
+\definecolor{blue4}{HTML}{00008f}
+\definecolor{red4}{HTML}{8f0000}
+\definecolor{cyan4}{HTML}{008f8f}
+\definecolor{green4}{HTML}{008f00}
+\definecolor{green2}{HTML}{00ff00}
+\usepackage{lmodern}% Font settings for clean look
+\usefonttheme{structurebold}
+\setbeamerfont{title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\normalsize, series=\mdseries}
+
+\setbeamerfont{section in toc}{series=\bfseries} % Table of contents formatting
+\setbeamerfont{subsection in toc}{series=\bfseries}
+\setbeamercolor{section in toc}{fg=ceruleanblue}
+\setbeamercolor{subsection in toc}{fg=gray}
+\setbeamercolor{block title}{bg=ceruleanblue, fg=ceruleanblue!20}% Clean block and theorem environments
+\setbeamercolor{block body}{bg=ceruleanblue, fg=ceruleanblue!20}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{itemize items}[circle] % Clean itemize bullets
+\setbeamercolor{itemize item}{fg=ceruleanblue}
+\setbeamercolor{itemize subitem}{fg=ceruleanblue}
+\everymath{\displaystyle} % Mathematical formatting
+\definecolor{darkRed}{rgb}{0.55,0,0}
+\definecolor{darkGreen}{rgb}{0,0.39,0}
+\definecolor{darkBlue}{rgb}{0.16,0.32,0.75}
+\definecolor{Red}{rgb}{0.8,0,0}
+\definecolor{Green}{rgb}{0,0.6,0}
+\usetikzlibrary{decorations.pathmorphing,arrows.meta,calc,patterns,3d}
+
+% Theorem environments (Beamer already defines theorem, lemma, corollary, definition, etc.)
+\newtheorem{proposition}{Proposition}
+
+% Theorem block colors
+\setbeamercolor{block title}{bg=ceruleanblue!20, fg=ceruleanblue!80!black}
+\setbeamercolor{block body}{bg=ceruleanblue!5, fg=black}
+
+% Automatic outline at each section and subsection
+% \AtBeginSection[]{
+%   \begin{frame}{Outline}
+%     \tableofcontents[currentsection,hideothersubsections]
+%   \end{frame}
+% }
+
+% \AtBeginSubsection[]{
+%   \begin{frame}{Outline}
+%     \tableofcontents[currentsection,currentsubsection]
+%   \end{frame}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% title
+\title[Embedded Convex Optimization for PMSM Control]{Embedded Convex Optimization for Control of Synchronous machines}
+
+\subtitle{PhD Defense}
+
+\author[H. Houmsi]{Hiba HOUMSI}
+
+\institute[INSA Lyon]{
+    Laboratoire Ampère\\
+    INSA Lyon\\
+    \vspace{0.2cm}
+    \textbf{Supervisors:}
+    Paolo Massioni, Federico Bribiesca-Argomedo, Romain Delpoux
+}
+\date{\today}
+% Logo (adjust path as needed)\logo{\includegraphics[height=1cm]{logo_insa.png}}
+
+\begin{document}
+
+% ========================================
+% Introduction and Problem Statement
+% ========================================
+\input{introduction.tex}
+
+% ========================================
+% Section 1: Optimal Torque Control
+% ========================================
+\input{section1_optimal_torque_control.tex}
+
+% ========================================
+% Section 2: Embedded Control Synthesis
+% ========================================
+\input{section2_embedded_control_synthesis.tex}
+
+% ========================================
+% Section 3: Linear Parameter Varying Control
+% ========================================
+\input{section3_lpv_control.tex}
+
+% ========================================
+% Section 4: Conclusion
+% ========================================
+\input{section4_conclusion.tex}
+
+% ========================================
+% Section 5: Perspectives
+% ========================================
+\input{section5_perspectives.tex}
+
+% ========================================
+% Appendix
+% ========================================
+\appendix
+%\input{appendix.tex}
+
+\end{document}
